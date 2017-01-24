@@ -8,7 +8,7 @@ const con = server.connection({
 });
 
 var engine = require('hapi-react')();
-
+server.register(require('inert'), ()=>{});
 server.register(require('vision'), (err) => {
 
     server.views({
@@ -19,6 +19,18 @@ server.register(require('vision'), (err) => {
         },
         relativeTo: __dirname,
         path: 'views'
+    });
+
+    server.route({
+        method: 'GET',
+        path: '/public/{path*}',
+        handler: {
+            directory: {
+                path: './public',
+                listing: false,
+                index: true,
+            },
+        },
     });
 
     server.route({

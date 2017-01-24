@@ -4,7 +4,8 @@ const modal = React.createClass({
     render: function(){
         return (
             <div>
-                <div>{this.props.name}</div>
+                <div className="name-div">{this.props.name}</div>
+                <div className="name-div">{this.props.surname}</div>
             </div>
         );
     }
