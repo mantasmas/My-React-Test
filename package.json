@@ -1,15 +1,33 @@
 {
   "name": "testingreact",
   "version": "1.0.0",
-  "main": "master.js",
+  "main": "server.js",
   "dependencies": {
     "hapi": "^16.1.0",
     "react": "^15.4.2",
-    "vision": "^4.1.1"
+    "vision": "^4.1.1",
+	"hoek": "4.x.x"
   },
-  "devDependencies": {},
+  "peerDependencies": {
+    "react": "15.x.x",
+    "react-dom": "15.x.x "
+  },
+  "devDependencies": {
+	"babel": "6.x.x",
+    "babel-core": "6.x.x",
+    "babel-loader": "6.x.x",
+    "babel-preset-es2015": "6.x.x",
+    "babel-preset-react": "6.x.x",
+    "code": "4.x.x",
+    "hapi": "15.x.x",
+    "inert": "4.x.x",
+    "lab": "11.x.x",
+    "react": "15.x.x",
+    "react-dom": "15.x.x",
+    "vision": "4.x.x",
+    "webpack": "1.x.x"},
   "scripts": {
-    "start": "node --use_strict master.js"
+    "start": "node --use_strict server.js"
   },
   "author": "",
   "license": "ISC",
